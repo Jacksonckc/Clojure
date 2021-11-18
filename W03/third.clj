@@ -1,13 +1,13 @@
-  (defn gcd-instrumented 
-  ([b] (gcd-instrumented (bigint (rand b)) (bigint b)))
-  ([a b]
+;; Take 2 inputs and finds the greastest common denominator for a and b.
+(defn gcd-instrumented [a b]
     (if (zero? b)
       a
       (do
        (println a '= b (list (quot a b)) '+ (rem a b))
-       (recur b (mod a b))))))
+       (recur b (mod a b)))))
        
-
+;; Takes only 1 input, generates a random number which is smaller than the input,
+;; then finds the gcd for those two numbers.
 (defn gcd
   ([b] (gcd (bigint 
   (rand b)) 
@@ -19,7 +19,7 @@
 
 
 
-
+;; 
 (defn prime_pretender_test[b]
   (loop [x 20]
     (when (>= x 1)
