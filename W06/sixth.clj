@@ -38,15 +38,3 @@
                         ;; Senario when the income is not lower than 523601
                         (if (> salary 523600)
                             (+ 157804.25 (* (- salary 523600) tax_rate_07))))))))))
-
-
-
-
-
-
-
-
-
-;; (+157804.25(* (- salary 523600) tax_rate_07))
-
-;; )
